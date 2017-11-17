@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:h="http://xmlns.jcp.org/jsf/html">
-<head>
+<h:head>
     <title>Travel App</title>
     <meta charset="UTF-8"/>
-</head>
+    <h:outputStylesheet name="agile/layout.css" />
+</h:head>
 <h:body>
-    <div id="index" style="height: 300px;"/>
-    <div style="width: 500px; margin-left: auto; margin-right: auto;">
+    <div class="index">1</div>
+    <div class="question">
         <h:form>
             <h:outputText value="Are you a penguin person?"/>
-            <h:commandButton value="YES" action="eggs_yes.xhtml"/>
-            <h:commandButton value="NO" action="eggs_no.xhtml"/>
+            <h:commandButton value="YES" action="endSweden.xhtml"/>
+            <h:commandButton value="NO" action="endSpain.xhtml"/>
         </h:form>
     </div>
 </h:body>
