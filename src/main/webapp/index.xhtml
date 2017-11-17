@@ -1,8 +1,17 @@
 <!DOCTYPE html>
-<html xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:body>
-        <h:outputText value="Are you a penguin person?"/>
-        <h:commandButton value="YES"/>
-        <h:commandButton value="NO"/>
-    </h:body>
+<html xmlns:h="http://xmlns.jcp.org/jsf/html">
+<head>
+    <title>Travel App</title>
+    <meta charset="UTF-8"/>
+</head>
+<h:body>
+    <div id="top-div" style="height: 300px;"/>
+    <div style="width: 500px; margin-left: auto; margin-right: auto;">
+        <h:form>
+            <h:outputText value="Are you a penguin person?"/>
+            <h:commandButton value="YES" action="endSweden.xhtml"/>
+            <h:commandButton value="NO" action="endSpain.xhtml"/>
+        </h:form>
+    </div>
+</h:body>
 </html>
