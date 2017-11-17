@@ -5,7 +5,7 @@
     <artifactId>scrum-project</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>togethAir Maven Webapp</name>
+    <name>Travel App</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -17,7 +17,7 @@
     </properties>
 
     <build>
-        <finalName>togethAir</finalName>
+        <finalName>travel-app</finalName>
     </build>
 
     <dependencies>
@@ -115,39 +115,4 @@
             </exclusions>
         </dependency>
     </dependencies>
-
-    <repositories>
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>bintray-deluan-maven</id>
-            <name>bintray</name>
-            <url>http://dl.bintray.com/deluan/maven</url>
-        </repository>
-    </repositories>
-
-    <!--Travis profile that excludes certain tests because they use databases that are not available-->
-    <profiles>
-        <profile>
-            <id>travis</id>
-            <build>
-                <finalName>togethAir</finalName>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>2.20.1</version>
-                        <configuration>
-                            <excludes>
-                                <!--<exclude>**/AbstractRepositoryTest.java</exclude>-->
-                                <!--<exclude>**/FlightSeatRelationTest.java</exclude>-->
-                                <exclude>**/AirportRepositoryTest.java</exclude>
-                            </excludes>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>
